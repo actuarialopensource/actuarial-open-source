@@ -31,7 +31,7 @@ export default function Home({ repos }) {
             "Together we can transform actuarial science. A new emphasis on reproducibility by all.",
           images: [
             {
-              url: "https://i.imgflip.com/6hpt7w.jpg",
+              url: "https://actuarialopensource.org/cheems.png",
               alt: "chad open source vs sad cheems closed source",
             },
           ],
