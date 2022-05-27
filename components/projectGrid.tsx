@@ -51,6 +51,8 @@ export default function ProjectGrid({ repos }: { repos: FlatQuery[] }) {
           <div className="pt-2">
             This website itself{" "}
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-700 underline"
               href="https://github.com/actuarialopensource/actuarial-open-source"
             >
@@ -59,6 +61,8 @@ export default function ProjectGrid({ repos }: { repos: FlatQuery[] }) {
             and built on top of open source software.
             <sup className=" text-lg">
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-700 underline"
                 href="https://github.com/vercel/next.js/"
               >
@@ -66,6 +70,8 @@ export default function ProjectGrid({ repos }: { repos: FlatQuery[] }) {
               </a>
               ,{" "}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-700 underline"
                 href="https://github.com/tailwindlabs/tailwindcss"
               >
@@ -73,6 +79,8 @@ export default function ProjectGrid({ repos }: { repos: FlatQuery[] }) {
               </a>
               ,{" "}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-700 underline"
                 href="https://github.com/facebook/react"
               >
