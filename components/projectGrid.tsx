@@ -8,7 +8,7 @@ export default function ProjectGrid({ repos }: { repos: FlatQuery[] }) {
       <h2 className="text-3xl font-extrabold text-gray-900">
         Use open source actuarial software
       </h2>
-      <div>
+      <div className="flex flex-col align-center items-center">
         <ul
           role="list"
           className=" mt-6 pt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl"
@@ -43,15 +43,37 @@ export default function ProjectGrid({ repos }: { repos: FlatQuery[] }) {
             </li>
           ))}
         </ul>
-        <div className="pt-5 px-5">
+        <div className="pt-5 px-5  font-light text-gray-500">
           <div>
             The stars and forks update automatically. Star a repository, come
-            back in an hour, and see for yourself.
+            back in an hour, and see.
           </div>
           <div className="pt-2">
-            This website itself is open source and built on top of open source
-            technologies from companies like Vercel, Tailwind Labs, and
-            Facebook.
+            This website itself{" "}
+            <a className="text-blue-700 underline">is open source</a> and built
+            on top of open source software.
+            <sup className=" text-lg">
+              <a
+                className="text-blue-700 underline"
+                href="https://github.com/vercel/next.js/"
+              >
+                1
+              </a>
+              ,{" "}
+              <a
+                className="text-blue-700 underline"
+                href="https://github.com/tailwindlabs/tailwindcss"
+              >
+                2
+              </a>
+              ,{" "}
+              <a
+                className="text-blue-700 underline"
+                href="https://github.com/facebook/react"
+              >
+                3
+              </a>
+            </sup>
           </div>
         </div>
       </div>
