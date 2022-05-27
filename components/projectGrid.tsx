@@ -50,8 +50,13 @@ export default function ProjectGrid({ repos }: { repos: FlatQuery[] }) {
           </div>
           <div className="pt-2">
             This website itself{" "}
-            <a className="text-blue-700 underline">is open source</a> and built
-            on top of open source software.
+            <a
+              className="text-blue-700 underline"
+              href="https://github.com/actuarialopensource/actuarial-open-source"
+            >
+              is open source
+            </a>{" "}
+            and built on top of open source software.
             <sup className=" text-lg">
               <a
                 className="text-blue-700 underline"
