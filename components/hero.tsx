@@ -1,19 +1,17 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import LinkedIn from "../public/linkedin.svg";
 import Link from "next/link";
-
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
+import { gaEvent } from "../utils/analytics";
 
 export default function Example() {
+  const clickHeroLink = (url: string) => {
+    gaEvent({
+      action: "hero link",
+      params: {
+        url,
+      },
+    });
+  };
   return (
     <div className="relative bg-gray-50 overflow-hidden">
       <div
@@ -104,13 +102,19 @@ export default function Example() {
             <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
               <div className="rounded-md shadow">
                 <Link href="internship">
-                  <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                  <a
+                    onClick={() => clickHeroLink("internship")}
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                  >
                     Summer 2023 Internship
                   </a>
                 </Link>
               </div>
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                 <a
+                  onClick={() =>
+                    clickHeroLink("https://www.linkedin.com/groups/13937070/")
+                  }
                   href="https://www.linkedin.com/groups/13937070/"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
                 >

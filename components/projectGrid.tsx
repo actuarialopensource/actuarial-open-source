@@ -1,8 +1,18 @@
 import { StarIcon } from "@heroicons/react/outline";
 import { VscRepoForked } from "react-icons/vsc";
 import { FlatQuery } from "../utils/query";
+import { gaEvent } from "../utils/analytics";
 
 export default function ProjectGrid({ repos }: { repos: FlatQuery[] }) {
+  const clickProjectLink = (url: string) => {
+    gaEvent({
+      action: "outbound link",
+      params: {
+        url,
+      },
+    });
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 divide-y-2 divide-gray-200 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-extrabold text-gray-900">
@@ -18,7 +28,14 @@ export default function ProjectGrid({ repos }: { repos: FlatQuery[] }) {
               key={idx}
               className="m-1 border border-gray-300 col-span-1 bg-white hover:bg-blue-100 rounded-lg shadow divide-y divide-gray-200"
             >
-              <a target="_blank" rel="noopener noreferrer" href={repo.url}>
+              <a
+                onClick={() => {
+                  clickProjectLink(repo.url);
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={repo.url}
+              >
                 <div>
                   <div className="flex items-center justify-center truncate p-3">
                     <h3 className="text-blue-700  font-medium truncate">
