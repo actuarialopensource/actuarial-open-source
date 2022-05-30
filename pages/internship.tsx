@@ -133,52 +133,29 @@ export default function Example() {
               </span>
             </h1>
             <p className="mt-8 text-xl text-gray-500 leading-8 mx-auto">
-              No boss. No office. Yes paid.
+              No office. Yes paid.
             </p>
           </div>
           <div className="mt-6 max-w-prose prose mx-auto">
-            <div className="bg-yellow-100 p-5">
-              This is currently a proposal. It will become a reality if our
-              application to join the Open Source Collective is successful.
-            </div>
             <h2>Details</h2>
             <p>
-              This is a fully-remote internship for Summer 2023. You set your
-              own hours. You do not have a boss. We trust you.
+              This is a fully-remote internship. You set your own hours. I trust
+              you.
             </p>
             <h2>Qualifications</h2>
             <ol role="list">
               <li>You are good at programming.</li>
               <li>You want to make the actuarial world more open source.</li>
-              <li>
-                You can figure out how to make the actuarial world more open
-                source.
-              </li>
             </ol>
             <h2>Responsibilities</h2>
             <ol role="list">
-              <li>Make the actuarial world more open source.</li>
-              <li>Post once a week to the LinkedIn group.</li>
-            </ol>
-            <h2>Application process</h2>
-            <ol role="list">
               <li>
-                Join the{" "}
-                <a href="https://www.linkedin.com/groups/13937070/">
-                  the LinkedIn group
-                </a>
-                .
+                Be the data scientist working alongside a machine learning
+                engineer.
               </li>
-              <li>Express an interest in the internship.</li>
-              <li>Start contributing to the community.</li>
             </ol>
-            <h2>Pay</h2>
-            The balance in our{" "}
-            <a href="https://opencollective.com/actuarial-open-source">
-              Open Collective
-            </a>{" "}
-            and the funding for each intern is shown below.
-            <Budget />
+            <h2 className="mb-6">Pay</h2>
+            The balance in our Open Collective is for you to have.
           </div>
         </div>
       </div>
