@@ -1,4 +1,3 @@
-import Budget from "../components/budget";
 import { NextSeo } from "next-seo";
 
 export default function Example() {
