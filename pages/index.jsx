@@ -2,6 +2,7 @@ import Hero from "../components/hero";
 import Quotes from "../components/quotes";
 import ProjectGrid from "../components/projectGrid";
 import { getReposFlat, repoUrls } from "../utils/query";
+import AboutUs from "../components/aboutUs";
 import { NextSeo } from "next-seo";
 
 export const getStaticProps = async (context) => {
@@ -39,6 +40,7 @@ export default function Home({ repos }) {
       />
       <div>
         <Hero />
+        <AboutUs />
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <ProjectGrid repos={repos} />
           <Quotes />

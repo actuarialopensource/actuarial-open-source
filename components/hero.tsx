@@ -2,11 +2,13 @@ import Image from "next/image";
 import LinkedIn from "../public/linkedin.svg";
 import Link from "next/link";
 import { gaEvent } from "../utils/analytics";
+import { MailIcon } from "@heroicons/react/outline";
+import { VscGithubInverted, VscGithub } from "react-icons/vsc";
 
 export default function Example() {
   const clickHeroLink = (url: string) => {
     gaEvent({
-      action: "hero link",
+      action: url,
       params: {
         url,
       },
@@ -102,20 +104,17 @@ export default function Example() {
             <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() =>
-                    clickHeroLink("https://www.linkedin.com/groups/13937070/")
+                    clickHeroLink("https://github.com/actuarialopensource")
                   }
-                  href="https://www.linkedin.com/groups/13937070/"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
+                  href="https://github.com/orgs/actuarialopensource/projects?type=beta"
+                  className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
                 >
-                  LinkedIn Community
-                  <div className="ml-4">
-                    <Image
-                      src={LinkedIn}
-                      height={34}
-                      width={34}
-                      alt="LinkedIn Logo"
-                    />
+                  Help us build the future on GitHub
+                  <div className="ml-4 text-white">
+                    <VscGithubInverted className="w-8 h-8 " />
                   </div>
                 </a>
               </div>
