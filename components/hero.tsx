@@ -1,9 +1,4 @@
-import Image from "next/image";
-import LinkedIn from "../public/linkedin.svg";
-import Link from "next/link";
 import { gaEvent } from "../utils/analytics";
-import { MailIcon } from "@heroicons/react/outline";
-import { VscGithubInverted, VscGithub } from "react-icons/vsc";
 import { BsLinkedin } from "react-icons/bs";
 
 export default function Example() {
@@ -114,7 +109,7 @@ export default function Example() {
                   className="flex items-center justify-center text-xl  px-5 py-3 border border-transparent font-medium rounded-md text-black bg-white hover:shadow-lg"
                 >
                   Join the community on LinkedIn
-                  <div className="ml-4 text-blue-400 bg-white">
+                  <div className="ml-4 text-blue-500 bg-white">
                     <BsLinkedin className="w-8 h-8 " />
                   </div>
                 </a>
