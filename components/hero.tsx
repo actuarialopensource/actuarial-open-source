@@ -4,6 +4,7 @@ import Link from "next/link";
 import { gaEvent } from "../utils/analytics";
 import { MailIcon } from "@heroicons/react/outline";
 import { VscGithubInverted, VscGithub } from "react-icons/vsc";
+import { BsLinkedin } from "react-icons/bs";
 
 export default function Example() {
   const clickHeroLink = (url: string) => {
@@ -107,14 +108,14 @@ export default function Example() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() =>
-                    clickHeroLink("https://github.com/actuarialopensource")
+                    clickHeroLink("https://www.linkedin.com/groups/13937070/")
                   }
-                  href="https://github.com/orgs/actuarialopensource/projects?type=beta"
-                  className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+                  href="https://www.linkedin.com/groups/13937070/"
+                  className="flex items-center justify-center text-xl  px-5 py-3 border border-transparent font-medium rounded-md text-black bg-white hover:shadow-lg"
                 >
-                  Help us build the future on GitHub
-                  <div className="ml-4 text-white">
-                    <VscGithubInverted className="w-8 h-8 " />
+                  Join the community on LinkedIn
+                  <div className="ml-4 text-blue-400 bg-white">
+                    <BsLinkedin className="w-8 h-8 " />
                   </div>
                 </a>
               </div>
